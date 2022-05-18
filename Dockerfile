@@ -2,11 +2,11 @@ FROM node:16.13.1-alpine
 
 # node app port
 EXPOSE 3000
+
 WORKDIR /app/
 
-COPY src ./app/src
-COPY index.js ./app/index.js
-
+COPY src ./src
+COPY index.js ./index.js
 
 COPY package.json process.yml ./
 # RUN ls -alh
