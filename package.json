@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "node .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "sh deploy.sh",
+    "docker": "docker build --tag prw:latest .",
+    "predeploy-cluster": "yarn global add pm2 && yarn install --prod",
+    "deploy-cluster": "pm2-runtime start process.yml --max-memory-restart 1G"
   },
   "repository": {
     "type": "git",

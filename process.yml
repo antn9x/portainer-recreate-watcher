@@ -1,0 +1,5 @@
+apps:
+  - script: ./index.js # Application's startup file name
+    instances: max # Number of processes that must run in parallel, you can change this if you want
+    exec_mode: cluster # Execution mode
+    name: "server-api"
