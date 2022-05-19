@@ -57,7 +57,7 @@ const serverFactory = (handler, opts) => {
 const fastify = require("fastify");
 const app = fastify({
   logger: true,
-  serverFactory
+  // serverFactory
 });
 
 app.post('/', (req, reply) => {
