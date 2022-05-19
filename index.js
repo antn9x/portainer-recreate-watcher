@@ -63,7 +63,11 @@ const app = fastify({
 app.post('/', (req, reply) => {
   const { connectUri, stackId, imageUri } = req.body;
   recreate(connectUri, stackId, imageUri);
-  reply.status(200).send('OK\n');
+  reply.status(200).send('OK');
+})
+
+app.get('/', (req, reply) => {
+  reply.status(200).send('Test OK\n');
 })
 
 app.ready().then(() => {
